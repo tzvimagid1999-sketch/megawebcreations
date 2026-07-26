@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="Arial, sans-serif">
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#2f6bff"/>
+  <g transform="translate(80,90)">
+    <rect width="46" height="46" rx="12" fill="#2f6bff"/><rect x="13" y="13" width="20" height="20" rx="6" fill="#fff"/>
+    <text x="62" y="32" font-size="30" font-weight="700" fill="#0b0d13">MegaWeb<tspan fill="#5a6472">Creations</tspan></text>
+  </g>
+  <text x="80" y="300" font-size="76" font-weight="800" fill="#0b0d13" letter-spacing="-2">Websites that generate</text>
+  <text x="80" y="388" font-size="76" font-weight="800" letter-spacing="-2"><tspan fill="#0b0d13">customers — </tspan><tspan fill="#2f6bff">on autopilot.</tspan></text>
+  <text x="80" y="470" font-size="34" fill="#5a6472">High-converting web design + AI automation for small business.</text>
+  <text x="80" y="560" font-size="28" font-weight="700" fill="#2f6bff">megawebcreations.com</text>
+</svg>
