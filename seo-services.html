@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Services for Small Business | MegaWeb Creations</title>
+    <meta name="description" content="Get found on Google. SEO services for small businesses — keyword research, on-page optimization, local SEO, and technical fixes that bring paying customers.">
+    <meta name="keywords" content="SEO services, small business SEO, local SEO, keyword research, on-page optimization, Google rankings">
+    <link rel="canonical" href="https://megawebcreations.com/seo-services.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --dark: #0f1a2e;
+            --light: #f5f7ff;
+            --text: #1a1a2e;
+            --gray: #6c757d;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: #ffffff;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--primary); }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white !important;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0f1a2e 0%, #1a1f4e 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 650px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+        }
+
+        section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--text);
+        }
+
+        .section-sub {
+            text-align: center;
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .card {
+            padding: 2.5rem;
+            background: linear-gradient(135deg, var(--light) 0%, white 100%);
+            border-radius: 15px;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
+        }
+
+        .card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .card p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .timeline { max-width: 800px; margin: 0 auto; }
+
+        .phase {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            align-items: flex-start;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .phase:last-child { border-bottom: none; }
+
+        .phase-time {
+            flex-shrink: 0;
+            width: 120px;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.05rem;
+        }
+
+        .phase h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .phase p { color: var(--gray); line-height: 1.8; }
+
+        .cta-band {
+            background: linear-gradient(135deg, var(--dark) 0%, #1a1f4e 100%);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 2rem;
+        }
+
+        .cta-band h2 { color: white; }
+
+        .cta-band p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        footer {
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer a { color: var(--primary); text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            h2 { font-size: 2rem; }
+            .phase { flex-direction: column; gap: 0.5rem; }
+            .phase-time { width: auto; }
+            .cta-band { margin: 3rem 1rem; padding: 3rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">MegaWeb Creations</a>
+            <ul>
+                <li><a href="web-design.html">Web Design</a></li>
+                <li><a href="ai-automation.html">AI Automation</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Book Free Call</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>SEO That Brings Paying Customers</h1>
+        <p>Get found on Google for the searches your customers are already making. No tricks, no shortcuts — just the work that actually moves rankings.</p>
+    </section>
+
+    <section>
+        <h2>What's Included</h2>
+        <p class="section-sub">Every piece of SEO that matters, handled for you</p>
+
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">🔍</div>
+                <h3>Keyword Research</h3>
+                <p>We find the exact phrases your customers type into Google — the ones with buying intent, not just traffic.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📄</div>
+                <h3>On-Page Optimization</h3>
+                <p>Title tags, meta descriptions, headings, and content structured so Google understands exactly what each page is about.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚙️</div>
+                <h3>Technical SEO</h3>
+                <p>Site speed, mobile usability, structured data, sitemaps, and crawl issues — the foundation rankings are built on.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📍</div>
+                <h3>Local SEO</h3>
+                <p>Google Business Profile optimization, local citations, and location pages so nearby customers find you first.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">✍️</div>
+                <h3>Content Strategy</h3>
+                <p>A content plan built around what your customers search for, so every article has a job to do.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📈</div>
+                <h3>Tracking & Reporting</h3>
+                <p>Search Console and analytics set up properly, with plain-English reports on what's working and what's next.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>What to Expect</h2>
+        <p class="section-sub">SEO is a long game — here's an honest timeline</p>
+
+        <div class="timeline">
+            <div class="phase">
+                <div class="phase-time">Month 1</div>
+                <div>
+                    <h3>Foundation</h3>
+                    <p>Full audit, keyword research, technical fixes, and on-page optimization. Google starts crawling and indexing your updated pages.</p>
+                </div>
+            </div>
+            <div class="phase">
+                <div class="phase-time">Months 2–3</div>
+                <div>
+                    <h3>Early Movement</h3>
+                    <p>Long-tail keywords begin ranking. You'll see impressions climb in Search Console before clicks follow.</p>
+                </div>
+            </div>
+            <div class="phase">
+                <div class="phase-time">Months 4–6</div>
+                <div>
+                    <h3>Real Traffic</h3>
+                    <p>Competitive keywords move into striking distance. Organic visits become a meaningful lead source.</p>
+                </div>
+            </div>
+            <div class="phase">
+                <div class="phase-time">Months 6+</div>
+                <div>
+                    <h3>Compounding Returns</h3>
+                    <p>Authority builds, rankings stabilize, and traffic keeps growing without proportional spend. This is where SEO pays for itself.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-band">
+        <h2>Want to Know Where You Stand?</h2>
+        <p>Book a free call and we'll walk through your current search visibility and the fastest path to improving it.</p>
+        <a href="index.html#contact" class="btn">Get Your Free SEO Review →</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MegaWeb Creations. <a href="index.html">Back to home</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Automation for Small Business | MegaWeb Creations</title>
+    <meta name="description" content="AI chatbots, automated lead qualification, and 24/7 follow-up systems for small businesses. Never miss a lead again.">
+    <meta name="keywords" content="AI automation, AI chatbots, business automation, workflow automation, CRM automation, lead qualification">
+    <link rel="canonical" href="https://megawebcreations.com/ai-automation.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --dark: #0f1a2e;
+            --light: #f5f7ff;
+            --text: #1a1a2e;
+            --gray: #6c757d;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: #ffffff;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--primary); }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white !important;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0f1a2e 0%, #1a1f4e 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 650px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+        }
+
+        section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--text);
+        }
+
+        .section-sub {
+            text-align: center;
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .card {
+            padding: 2.5rem;
+            background: linear-gradient(135deg, var(--light) 0%, white 100%);
+            border-radius: 15px;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
+        }
+
+        .card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .card p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .steps { max-width: 800px; margin: 0 auto; }
+
+        .step {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            align-items: flex-start;
+        }
+
+        .step-num {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .step h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .step p { color: var(--gray); line-height: 1.8; }
+
+        .cta-band {
+            background: linear-gradient(135deg, var(--dark) 0%, #1a1f4e 100%);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 2rem;
+        }
+
+        .cta-band h2 { color: white; }
+
+        .cta-band p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        footer {
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer a { color: var(--primary); text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            h2 { font-size: 2rem; }
+            .step { flex-direction: column; gap: 1rem; }
+            .cta-band { margin: 3rem 1rem; padding: 3rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">MegaWeb Creations</a>
+            <ul>
+                <li><a href="web-design.html">Web Design</a></li>
+                <li><a href="seo-services.html">SEO</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Book Free Call</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>AI Automation That Never Sleeps</h1>
+        <p>Smart chatbots, instant lead qualification, and automated follow-up that turn visitors into booked calls — 24 hours a day.</p>
+    </section>
+
+    <section>
+        <h2>What AI Automation Does For You</h2>
+        <p class="section-sub">Stop losing leads to slow response times</p>
+
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">💬</div>
+                <h3>AI Chatbots</h3>
+                <p>Answer customer questions instantly, any hour of the day. Trained on your business so responses sound like you, not a robot.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎯</div>
+                <h3>Lead Qualification</h3>
+                <p>Automatically ask the right questions, score each lead, and route the serious ones straight to you. Stop wasting time on tire-kickers.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📅</div>
+                <h3>Automated Booking</h3>
+                <p>Let prospects book calls directly into your calendar without a single back-and-forth email. Fewer no-shows, more conversations.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Instant Follow-Up</h3>
+                <p>Respond within seconds of a form submission. Speed-to-lead is the single biggest factor in whether a prospect converts.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔄</div>
+                <h3>Workflow Automation</h3>
+                <p>Connect your site to your CRM, email, and tools so data flows automatically. No copy-pasting, no dropped balls.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>CRM Integration</h3>
+                <p>Every lead lands in your CRM with full context — where they came from, what they asked, and what they need next.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>How We Build It</h2>
+        <p class="section-sub">From first call to fully automated in weeks, not months</p>
+
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div>
+                    <h3>Map Your Process</h3>
+                    <p>We look at how leads currently reach you, where they drop off, and which repetitive tasks are eating your time.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div>
+                    <h3>Train the AI</h3>
+                    <p>We feed the system your services, pricing, FAQs, and tone of voice so it represents your business accurately.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <div>
+                    <h3>Connect Your Tools</h3>
+                    <p>Calendar, CRM, email, payment — everything wired together so a new lead flows through without you touching it.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <div>
+                    <h3>Test, Launch, Refine</h3>
+                    <p>We test every path, launch it live, then tune the responses based on real conversations over the first few weeks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-band">
+        <h2>Ready to Stop Missing Leads?</h2>
+        <p>Book a free 30-minute call and we'll map out exactly which parts of your business can run themselves.</p>
+        <a href="index.html#contact" class="btn">Book Your Free Call →</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MegaWeb Creations. <a href="index.html">Back to home</a></p>
+    </footer>
+</body>
+</html>

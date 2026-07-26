@@ -416,13 +416,22 @@
         }
 
         .project-image {
-            height: 200px;
+            height: 220px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3rem;
             color: white;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
         }
 
         .project-content {
@@ -734,9 +743,10 @@
         <nav>
             <div class="logo">MegaWeb Creations</div>
             <ul>
-                <li><a href="#services">Services</a></li>
+                <li><a href="web-design.html">Web Design</a></li>
+                <li><a href="ai-automation.html">AI Automation</a></li>
+                <li><a href="seo-services.html">SEO</a></li>
                 <li><a href="#portfolio">Work</a></li>
-                <li><a href="#testimonials">Reviews</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact" class="nav-cta">Book Free Call</a></li>
             </ul>
@@ -781,21 +791,24 @@
         <p class="section-subtitle">Complete AI automation + custom web design solutions</p>
 
         <div class="services">
-            <div class="service-card">
+            <a href="web-design.html" class="service-card" style="text-decoration: none; color: inherit;">
                 <div class="service-icon">🎨</div>
                 <h3>Custom Web Design</h3>
                 <p class="service-desc">Beautiful, fast, mobile-optimized websites that convert visitors into customers. Built for your unique brand — never a template. Each site is optimized for Google rankings and user conversion.</p>
-            </div>
-            <div class="service-card">
+                <p style="margin-top: 1.5rem; color: #667eea; font-weight: 600;">Learn more →</p>
+            </a>
+            <a href="ai-automation.html" class="service-card" style="text-decoration: none; color: inherit;">
                 <div class="service-icon">🤖</div>
                 <h3>AI Automation</h3>
                 <p class="service-desc">Smart chatbots, instant lead qualification, automated follow-up, and booking systems that work 24/7. Your business never misses a lead while you sleep.</p>
-            </div>
-            <div class="service-card">
+                <p style="margin-top: 1.5rem; color: #667eea; font-weight: 600;">Learn more →</p>
+            </a>
+            <a href="seo-services.html" class="service-card" style="text-decoration: none; color: inherit;">
                 <div class="service-icon">📈</div>
-                <h3>SEO & Lead Generation</h3>
+                <h3>SEO &amp; Lead Generation</h3>
                 <p class="service-desc">Get found on Google for the keywords your customers search for. Organic traffic, local SEO, and conversion-focused optimization that brings paying customers.</p>
-            </div>
+                <p style="margin-top: 1.5rem; color: #667eea; font-weight: 600;">Learn more →</p>
+            </a>
         </div>
     </section>
 
@@ -806,7 +819,7 @@
 
         <div class="projects">
             <a href="https://libecore.com" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
-                <div class="project-image">🏥</div>
+                <div class="project-image"><img src="images/libecore.png" alt="LibeCore healthcare IDR platform website designed by MegaWeb Creations" onerror="this.style.display='none'"></div>
                 <div class="project-content">
                     <span class="project-tag">Healthcare</span>
                     <h3 class="project-title">LibeCore</h3>
@@ -821,7 +834,7 @@
             </a>
 
             <a href="https://choshenmishpatmiami.com" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
-                <div class="project-image">⚖️</div>
+                <div class="project-image"><img src="images/chosen-mishpat.png" alt="Chosen Mishpat Miami Beis Din website designed by MegaWeb Creations" onerror="this.style.display='none'"></div>
                 <div class="project-content">
                     <span class="project-tag">Legal / Religious</span>
                     <h3 class="project-title">Chosen Mishpat Miami</h3>
@@ -836,7 +849,7 @@
             </a>
 
             <a href="https://tomchei-shabbos-gilt.vercel.app" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
-                <div class="project-image">🤝</div>
+                <div class="project-image"><img src="images/tomchei-shabbos.png" alt="Tomchei Shabbos of Florida nonprofit donation website designed by MegaWeb Creations" onerror="this.style.display='none'"></div>
                 <div class="project-content">
                     <span class="project-tag">Nonprofit</span>
                     <h3 class="project-title">Tomchei Shabbos</h3>
@@ -945,9 +958,10 @@
             <p style="margin-bottom: 1.5rem; opacity: 0.8;">AI automation + custom web design that generates customers 24/7.</p>
 
             <div class="footer-links">
-                <a href="#services">Services</a>
+                <a href="web-design.html">Web Design</a>
+                <a href="ai-automation.html">AI Automation</a>
+                <a href="seo-services.html">SEO Services</a>
                 <a href="#portfolio">Portfolio</a>
-                <a href="#testimonials">Testimonials</a>
                 <a href="#faq">FAQ</a>
                 <a href="tel:+1-347-782-8453">347-782-8453</a>
                 <a href="mailto:megawebcreations613@gmail.com">Contact</a>

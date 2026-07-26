@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="43duF__XprPvIc4pbM1LEKamuMBFArv3T_i1iURts-g" />
+    <title>Custom Web Design Services | MegaWeb Creations</title>
+    <meta name="description" content="Professional custom web design for small businesses. Beautiful, fast, mobile-optimized websites that convert visitors into customers.">
+    <meta name="keywords" content="custom web design, professional websites, small business websites, web design services">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --dark: #0f1a2e;
+            --light: #f5f7ff;
+            --text: #1a1a2e;
+            --gray: #6c757d;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: #ffffff;
+        }
+
+        /* Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white !important;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #0f1a2e 0%, #1a1f4e 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+        }
+
+        /* Section */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--text);
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+
+        .content img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .content h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .features li {
+            padding: 1rem 0;
+            font-size: 1.1rem;
+            color: var(--text);
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .features li:before {
+            content: "✓ ";
+            color: var(--primary);
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        footer {
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 5rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">MegaWeb Creations</a>
+            <ul>
+                <li><a href="ai-automation.html">AI Automation</a></li>
+                <li><a href="seo-services.html">SEO</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Book Free Call</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Custom Web Design That Converts</h1>
+        <p>Beautiful, fast, mobile-optimized websites built for your unique brand — never a template.</p>
+    </section>
+
+    <section>
+        <h2>Why Custom Web Design Matters</h2>
+
+        <div class="content">
+            <div>
+                <h3>Stand Out From Templates</h3>
+                <p>Templates are cheap, generic, and forgettable. We build custom designs that capture your brand's unique value and make you the obvious choice.</p>
+                <ul class="features">
+                    <li>100% custom design for your brand</li>
+                    <li>Fast-loading, mobile-first optimization</li>
+                    <li>SEO-ready structure</li>
+                    <li>Professional, modern aesthetics</li>
+                    <li>User experience focused</li>
+                </ul>
+            </div>
+            <img src="images/libecore.png" alt="Professional custom web design example - LibeCore healthcare platform">
+        </div>
+
+        <div class="content" style="grid-template-columns: 1fr 1fr;">
+            <img src="images/chosen-mishpat.png" alt="Elegant legal website design - Chosen Mishpat Miami">
+            <div>
+                <h3>Design That Drives Results</h3>
+                <p>Great design isn't just pretty — it converts. We design with psychology, user behavior, and your business goals in mind.</p>
+                <ul class="features">
+                    <li>High-converting layouts</li>
+                    <li>Clear call-to-action placement</li>
+                    <li>Trust-building design patterns</li>
+                    <li>Responsive across all devices</li>
+                    <li>Fast performance (90+ Lighthouse score)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Our Web Design Process</h2>
+        <div class="content" style="grid-template-columns: 1fr;">
+            <div>
+                <h3>1. Discovery & Strategy</h3>
+                <p>We understand your business, audience, and goals. This shapes every design decision.</p>
+
+                <h3 style="margin-top: 2rem;">2. Custom Design & Prototyping</h3>
+                <p>We design a unique site that reflects your brand and drives conversions. No templates, no compromises.</p>
+
+                <h3 style="margin-top: 2rem;">3. Development & Optimization</h3>
+                <p>We build your design with performance and SEO in mind. Every page loads fast and ranks well.</p>
+
+                <h3 style="margin-top: 2rem;">4. Launch & Support</h3>
+                <p>We launch your site and provide ongoing support to keep it running perfectly.</p>
+
+                <a href="index.html#contact" class="btn" style="margin-top: 2rem;">Get Your Custom Design</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MegaWeb Creations. <a href="index.html">Back to home</a></p>
+    </footer>
+</body>
+</html>
