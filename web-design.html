@@ -141,10 +141,57 @@
             margin-bottom: 5rem;
         }
 
-        .content img {
-            width: 100%;
+        .preview-window {
             border-radius: 15px;
+            overflow: hidden;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            border: 1px solid #dee2e6;
+        }
+
+        .preview-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.7rem 1rem;
+            background: #f1f3f5;
+        }
+
+        .preview-bar span {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+        }
+
+        .preview-bar span:nth-child(1) { background: #ff5f57; }
+        .preview-bar span:nth-child(2) { background: #febc2e; }
+        .preview-bar span:nth-child(3) { background: #28c840; }
+
+        .preview-url {
+            flex: 1;
+            margin-left: 0.7rem;
+            background: white;
+            border-radius: 20px;
+            padding: 0.3rem 0.9rem;
+            font-size: 0.78rem;
+            color: var(--gray);
+        }
+
+        .preview-frame {
+            position: relative;
+            height: 340px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .preview-frame iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 250%;
+            height: 250%;
+            border: 0;
+            transform: scale(0.4);
+            transform-origin: top left;
         }
 
         .content h3 {
@@ -259,11 +306,17 @@
                     <li>User experience focused</li>
                 </ul>
             </div>
-            <img src="images/libecore.png" alt="Professional custom web design example - LibeCore healthcare platform">
+            <a href="https://libecore.com" target="_blank" rel="noopener" class="preview-window" style="display:block;">
+                <div class="preview-bar"><span></span><span></span><span></span><div class="preview-url">libecore.com</div></div>
+                <div class="preview-frame"><iframe src="https://libecore.com" loading="lazy" title="LibeCore website preview" tabindex="-1" aria-hidden="true" style="pointer-events:none;"></iframe></div>
+            </a>
         </div>
 
         <div class="content" style="grid-template-columns: 1fr 1fr;">
-            <img src="images/chosen-mishpat.png" alt="Elegant legal website design - Chosen Mishpat Miami">
+            <a href="https://choshenmishpatmiami.com" target="_blank" rel="noopener" class="preview-window" style="display:block;">
+                <div class="preview-bar"><span></span><span></span><span></span><div class="preview-url">choshenmishpatmiami.com</div></div>
+                <div class="preview-frame"><iframe src="https://choshenmishpatmiami.com" loading="lazy" title="Chosen Mishpat Miami website preview" tabindex="-1" aria-hidden="true" style="pointer-events:none;"></iframe></div>
+            </a>
             <div>
                 <h3>Design That Drives Results</h3>
                 <p>Great design isn't just pretty — it converts. We design with psychology, user behavior, and your business goals in mind.</p>
