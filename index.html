@@ -11,6 +11,7 @@
     <meta name="keywords" content="AI automation, web design, lead generation, AI chatbots, business automation, small business websites, custom web design, CRM automation">
     <meta name="author" content="MegaWeb Creations">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="theme-color" content="#0b0b1f">
     <link rel="canonical" href="https://megawebcreations.com/">
 
     <!-- Open Graph / Facebook -->
@@ -43,17 +44,12 @@
             "@type": "PostalAddress",
             "addressCountry": "US"
         },
-        "sameAs": [
-            "https://www.facebook.com/megawebcreations",
-            "https://www.linkedin.com/company/megawebcreations"
-        ],
         "priceRange": "$$",
         "areaServed": "US",
         "serviceType": ["Web Design", "AI Automation", "Lead Generation", "SEO Services"]
     }
     </script>
 
-    <!-- Organization Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -74,989 +70,740 @@
     </script>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --primary: #667eea;
-            --secondary: #764ba2;
-            --dark: #0f1a2e;
-            --light: #f5f7ff;
-            --text: #1a1a2e;
-            --gray: #6c757d;
+            --violet: #7c6cff;
+            --indigo: #4f46e5;
+            --magenta: #b45cff;
+            --cyan: #22d3ee;
+            --ink: #0b0b1f;
+            --ink-2: #12122e;
+            --paper: #f7f7fb;
+            --text: #16162e;
+            --muted: #6b6b85;
+            --line: rgba(255, 255, 255, 0.12);
+            --radius: 26px;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
             line-height: 1.6;
             color: var(--text);
-            background: #ffffff;
+            background: var(--paper);
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Navigation */
+        .wrap { width: min(1240px, 100% - 3rem); margin-inline: auto; }
+
+        /* ---------- Nav ---------- */
         header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1.2rem 2rem;
             position: sticky;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            z-index: 90;
+            background: rgba(247, 247, 251, 0.72);
+            backdrop-filter: saturate(180%) blur(18px);
+            -webkit-backdrop-filter: saturate(180%) blur(18px);
+            border-bottom: 1px solid rgba(22, 22, 46, 0.07);
         }
 
         nav {
-            max-width: 1400px;
-            margin: 0 auto;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
             gap: 2rem;
             flex-wrap: wrap;
+            padding: 1rem 0;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, var(--indigo), var(--magenta));
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
         }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-            align-items: center;
-        }
+        nav ul { display: flex; align-items: center; gap: 1.9rem; list-style: none; }
 
         nav a {
             text-decoration: none;
             color: var(--text);
             font-weight: 500;
             font-size: 0.95rem;
-            transition: color 0.3s;
-            position: relative;
+            opacity: 0.82;
+            transition: opacity 0.2s;
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transition: width 0.3s ease;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
+        nav a:hover { opacity: 1; }
 
         .nav-cta {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white !important;
-            padding: 0.7rem 1.5rem;
-            border-radius: 50px;
+            background: linear-gradient(120deg, var(--indigo), var(--magenta));
+            color: #fff !important;
+            opacity: 1 !important;
+            padding: 0.7rem 1.4rem;
+            border-radius: 999px;
             font-weight: 600;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(79, 70, 229, 0.32);
+            transition: transform 0.25s, box-shadow 0.25s;
         }
 
-        .nav-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-        }
+        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(79, 70, 229, 0.42); }
 
-        /* Hero Section */
+        /* ---------- Animated gradient hero ---------- */
         .hero {
-            background: linear-gradient(135deg, #0f1a2e 0%, #1a1f4e 50%, #2d1b69 100%);
-            color: white;
-            padding: 6rem 2rem;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
             position: relative;
+            isolation: isolate;
+            color: #fff;
+            padding: 7rem 0 8rem;
             overflow: hidden;
+            background: var(--ink);
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            top: -40%;
-            right: -10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(102, 126, 234, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: float 8s ease-in-out infinite;
+            inset: -30%;
+            z-index: -2;
+            background: linear-gradient(120deg,
+                #0b0b1f 0%,
+                #241b5e 22%,
+                #4f46e5 42%,
+                #b45cff 58%,
+                #2a1f6b 78%,
+                #0b0b1f 100%);
+            background-size: 300% 300%;
+            animation: drift 22s ease-in-out infinite;
+            filter: saturate(125%);
         }
 
+        /* soft grain/vignette so the gradient reads premium, not neon */
         .hero::after {
             content: '';
             position: absolute;
-            bottom: -30%;
-            left: -5%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(118, 75, 162, 0.12) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: float 10s ease-in-out infinite reverse;
+            inset: 0;
+            z-index: -1;
+            background:
+                radial-gradient(80% 60% at 50% 0%, transparent, rgba(11, 11, 31, 0.55) 100%),
+                radial-gradient(50% 40% at 80% 20%, rgba(34, 211, 238, 0.16), transparent 70%);
         }
 
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-            text-align: center;
+        @keyframes drift {
+            0%, 100% { background-position: 0% 50%; }
+            50%      { background-position: 100% 50%; }
+        }
+
+        .hero-inner { max-width: 940px; margin-inline: auto; text-align: center; position: relative; }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.45rem 1.05rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid var(--line);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            margin-bottom: 1.8rem;
+        }
+
+        .eyebrow .dot {
+            width: 7px; height: 7px; border-radius: 50%;
+            background: #4ade80;
+            box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
+            animation: pulse 2.4s ease-out infinite;
+        }
+
+        @keyframes pulse {
+            0%   { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.55); }
+            70%  { box-shadow: 0 0 0 9px rgba(74, 222, 128, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
         }
 
         h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(2.6rem, 6.2vw, 4.6rem);
             font-weight: 800;
-            line-height: 1.15;
+            line-height: 1.05;
+            letter-spacing: -0.035em;
             margin-bottom: 1.5rem;
-            animation: slideInUp 0.8s ease;
         }
 
-        .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #a78bfa 100%);
+        .shine {
+            background: linear-gradient(100deg, #c4b5fd 10%, #67e8f9 45%, #f0abfc 80%);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            animation: slideInUp 0.8s ease 0.2s backwards;
+            font-size: clamp(1.05rem, 2vw, 1.28rem);
+            max-width: 640px;
+            margin: 0 auto 2.6rem;
+            opacity: 0.88;
         }
 
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: slideInUp 0.8s ease 0.4s backwards;
-        }
+        .cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
         .btn {
-            padding: 1.2rem 2.5rem;
+            padding: 1.05rem 2.3rem;
             border: none;
-            border-radius: 50px;
+            border-radius: 999px;
             font-size: 1rem;
-            font-weight: 600;
+            font-weight: 650;
+            font-family: inherit;
             cursor: pointer;
-            transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
+            transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            background: #fff;
+            color: var(--ink);
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
         }
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.36); }
+
+        .btn-glass {
+            background: rgba(255, 255, 255, 0.10);
+            color: #fff;
+            border: 1px solid var(--line);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
         }
 
-        .btn-secondary {
-            background: white;
-            color: #667eea;
-            border: 2px solid white;
-        }
+        .btn-glass:hover { background: rgba(255, 255, 255, 0.18); transform: translateY(-3px); }
 
-        .btn-secondary:hover {
-            background: transparent;
-            color: white;
-        }
+        /* ---------- Bento grid ---------- */
+        section { padding: 6rem 0; }
 
-        /* Stats */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-            padding-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
+        .section-head { max-width: 700px; margin: 0 auto 3.4rem; text-align: center; }
 
-        .stat {
-            text-align: center;
-            animation: slideInUp 0.8s ease 0.5s backwards;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
+        h2 {
+            font-size: clamp(2rem, 4.4vw, 3.1rem);
             font-weight: 800;
-            color: #a78bfa;
+            letter-spacing: -0.03em;
+            line-height: 1.12;
+            margin-bottom: 0.9rem;
         }
 
-        .stat-label {
-            font-size: 0.95rem;
-            opacity: 0.8;
-            margin-top: 0.5rem;
-        }
+        .section-sub { font-size: 1.08rem; color: var(--muted); }
 
-        /* Sections */
-        .section {
-            padding: 5rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            font-weight: 800;
-            margin-bottom: 1rem;
-            text-align: center;
-            color: var(--text);
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--gray);
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 4rem;
-        }
-
-        /* Services */
-        .services {
+        .bento {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.15rem;
         }
 
-        .service-card {
-            padding: 2.5rem;
-            background: linear-gradient(135deg, var(--light) 0%, white 100%);
-            border-radius: 15px;
-            border: 1px solid #e9ecef;
-            transition: all 0.3s ease;
+        .tile {
+            position: relative;
+            border-radius: var(--radius);
+            padding: 2.2rem;
+            background: #fff;
+            border: 1px solid rgba(22, 22, 46, 0.08);
+            box-shadow: 0 1px 2px rgba(22, 22, 46, 0.04);
+            transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
         }
 
-        .service-card h3 {
+        .tile:hover { transform: translateY(-6px); box-shadow: 0 22px 50px rgba(22, 22, 46, 0.12); }
+
+        .tile--wide { grid-column: span 2; }
+        .tile--tall { grid-column: span 2; grid-row: span 2; }
+
+        /* dark glass tiles */
+        .tile--dark {
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.13);
+            background:
+                linear-gradient(150deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.02)),
+                linear-gradient(135deg, #191243 0%, #2f1f6e 55%, #4f2a8f 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .tile--dark .tile-desc { color: rgba(255, 255, 255, 0.78); }
+
+        .tile-ico { font-size: 2rem; margin-bottom: 1.1rem; }
+
+        .tile h3 {
             font-size: 1.4rem;
             font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text);
+            letter-spacing: -0.015em;
+            margin-bottom: 0.7rem;
         }
 
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+        .tile-desc { color: var(--muted); line-height: 1.68; flex: 1; }
+
+        .tile-link { margin-top: 1.6rem; font-weight: 650; font-size: 0.95rem; }
+
+        .tile--stat { align-items: flex-start; justify-content: center; padding: 2rem; }
+
+        .stat-num {
+            font-size: clamp(2.1rem, 3.6vw, 2.9rem);
+            font-weight: 800;
+            letter-spacing: -0.035em;
+            line-height: 1;
+            background: linear-gradient(120deg, var(--indigo), var(--magenta));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .service-desc {
-            color: var(--gray);
-            line-height: 1.7;
+        .tile--dark .stat-num {
+            background: linear-gradient(120deg, #a5b4fc, #67e8f9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
-        }
+        .stat-lbl { font-size: 0.92rem; color: var(--muted); margin-top: 0.5rem; }
+        .tile--dark .stat-lbl { color: rgba(255, 255, 255, 0.72); }
 
-        /* Projects */
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 3rem;
-        }
+        /* ---------- Portfolio ---------- */
+        .work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.6rem; }
 
-        .project-card {
-            background: white;
-            border-radius: 20px;
+        .work {
+            border-radius: var(--radius);
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-            border: 1px solid #e9ecef;
-            position: relative;
+            background: #fff;
+            border: 1px solid rgba(22, 22, 46, 0.08);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s;
         }
 
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-            z-index: 1;
+        .work:hover { transform: translateY(-8px); box-shadow: 0 26px 60px rgba(22, 22, 46, 0.16); }
+
+        .chrome { display: flex; align-items: center; gap: 0.4rem; padding: 0.75rem 1rem; background: #eef0f5; }
+        .chrome i { width: 10px; height: 10px; border-radius: 50%; display: block; }
+        .chrome i:nth-child(1) { background: #ff5f57; }
+        .chrome i:nth-child(2) { background: #febc2e; }
+        .chrome i:nth-child(3) { background: #28c840; }
+
+        .chrome span {
+            flex: 1; margin-left: 0.6rem; background: #fff; border-radius: 999px;
+            padding: 0.28rem 0.85rem; font-size: 0.73rem; color: var(--muted);
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
 
-        .project-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-        }
+        .frame { position: relative; height: 250px; overflow: hidden; background: linear-gradient(135deg, var(--indigo), var(--magenta)); }
 
-        .project-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        /* Live site preview window */
-        .preview-window {
-            background: #e9ecef;
-            border-bottom: 1px solid #dee2e6;
-        }
-
-        .preview-bar {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.6rem 0.9rem;
-            background: #f1f3f5;
-        }
-
-        .preview-bar span {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #ced4da;
-        }
-
-        .preview-bar span:nth-child(1) { background: #ff5f57; }
-        .preview-bar span:nth-child(2) { background: #febc2e; }
-        .preview-bar span:nth-child(3) { background: #28c840; }
-
-        .preview-url {
-            flex: 1;
-            margin-left: 0.6rem;
-            background: white;
-            border-radius: 20px;
-            padding: 0.25rem 0.8rem;
-            font-size: 0.72rem;
-            color: var(--gray);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .preview-frame {
-            position: relative;
-            height: 240px;
-            overflow: hidden;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .preview-frame iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 300%;
-            height: 300%;
+        .frame iframe {
+            position: absolute; top: 0; left: 0;
+            width: 300%; height: 300%;
             border: 0;
             transform: scale(0.3333);
             transform-origin: top left;
             pointer-events: none;
         }
 
-        .preview-frame::after {
+        .frame::after {
             content: 'View live site →';
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(15, 26, 46, 0.82);
-            color: white;
-            font-weight: 600;
-            font-size: 1.05rem;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            position: absolute; inset: 0;
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(11, 11, 31, 0.82);
+            color: #fff; font-weight: 650;
+            opacity: 0; transition: opacity 0.3s;
         }
 
-        .project-card:hover .preview-frame::after {
-            opacity: 1;
+        .work:hover .frame::after { opacity: 1; }
+
+        .work-body { padding: 1.7rem; }
+
+        .tag {
+            display: inline-block; font-size: 0.75rem; font-weight: 650;
+            padding: 0.35rem 0.85rem; border-radius: 999px;
+            background: #eeeafd; color: var(--indigo); margin-bottom: 0.9rem;
         }
 
-        .project-content {
-            padding: 2rem;
-        }
+        .work h3 { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.015em; margin-bottom: 0.6rem; }
+        .work p { color: var(--muted); font-size: 0.97rem; line-height: 1.65; }
 
-        .project-tag {
-            display: inline-block;
-            background: var(--light);
-            color: var(--primary);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .project-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.8rem;
-            color: var(--text);
-        }
-
-        .project-desc {
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .project-stats {
-            display: flex;
-            gap: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #e9ecef;
-        }
-
-        .stat-item {
-            flex: 1;
-        }
-
-        .stat-value {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .stat-title {
-            font-size: 0.85rem;
-            color: var(--gray);
-        }
-
-        /* Testimonials */
-        .testimonials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .testimonial {
-            padding: 2rem;
-            background: white;
-            border-radius: 15px;
-            border: 1px solid #e9ecef;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .testimonial:hover {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .stars {
-            color: #ffc107;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
+        /* ---------- Testimonials ---------- */
+        .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.4rem; }
 
         .quote {
+            padding: 2.1rem;
+            border-radius: var(--radius);
+            background: #fff;
+            border: 1px solid rgba(22, 22, 46, 0.08);
+        }
+
+        .stars { color: #f5b400; letter-spacing: 0.1em; margin-bottom: 1rem; }
+        .quote blockquote { font-size: 1.02rem; line-height: 1.7; margin-bottom: 1.4rem; }
+        .who { font-weight: 650; }
+        .where { font-size: 0.9rem; color: var(--muted); }
+
+        /* ---------- FAQ ---------- */
+        .faq { max-width: 820px; margin-inline: auto; }
+
+        .qa { border-bottom: 1px solid rgba(22, 22, 46, 0.1); }
+
+        .q {
+            width: 100%;
+            text-align: left;
+            font-family: inherit;
+            font-size: 1.06rem;
+            font-weight: 650;
             color: var(--text);
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-            font-style: italic;
-            line-height: 1.7;
-        }
-
-        .author {
-            font-weight: 600;
-            color: var(--text);
-        }
-
-        .company {
-            font-size: 0.9rem;
-            color: var(--gray);
-        }
-
-        /* FAQ */
-        .faq-section {
-            background: linear-gradient(135deg, var(--light) 0%, white 100%);
-            padding: 3rem;
-            border-radius: 15px;
-            margin-bottom: 3rem;
-        }
-
-        .faq-item {
-            margin-bottom: 2rem;
-        }
-
-        .faq-question {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text);
+            background: none;
+            border: none;
+            padding: 1.5rem 0;
             cursor: pointer;
-            padding: 1rem;
-            background: white;
-            border-radius: 10px;
-            border: 1px solid #e9ecef;
-            transition: all 0.3s ease;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1.5rem;
         }
 
-        .faq-question:hover {
-            background: #f8f9fa;
-            border-color: var(--primary);
-        }
+        .q::after { content: '+'; font-size: 1.6rem; font-weight: 400; color: var(--muted); transition: transform 0.3s; }
+        .q[aria-expanded="true"]::after { transform: rotate(45deg); }
 
-        .faq-answer {
-            padding: 1rem;
-            color: var(--gray);
-            line-height: 1.7;
-            display: none;
-            border-left: 3px solid var(--primary);
-            margin-left: 1rem;
-            margin-top: 0.5rem;
-        }
+        .a { display: none; padding: 0 0 1.6rem; color: var(--muted); line-height: 1.72; max-width: 92%; }
+        .a.open { display: block; }
 
-        .faq-answer.active {
-            display: block;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--dark) 0%, #1a1f4e 100%);
-            color: white;
-            padding: 5rem 2rem;
-            border-radius: 20px;
-            text-align: center;
-            margin: 5rem 2rem;
+        /* ---------- CTA ---------- */
+        .cta-band {
             position: relative;
+            isolation: isolate;
             overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .cta-content {
-            position: relative;
-            z-index: 2;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-section p {
-            font-size: 1.1rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-        }
-
-        /* Footer */
-        footer {
-            background: #1a1a2e;
-            color: white;
-            padding: 3rem 2rem;
-            margin-top: 5rem;
+            border-radius: 34px;
+            padding: 5rem 2.5rem;
             text-align: center;
+            color: #fff;
+            background: var(--ink);
         }
 
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
+        .cta-band::before {
+            content: '';
+            position: absolute; inset: -40%;
+            z-index: -1;
+            background: linear-gradient(120deg, #0b0b1f, #3b2a8c, #b45cff, #1a1440, #0b0b1f);
+            background-size: 300% 300%;
+            animation: drift 26s ease-in-out infinite;
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
+        .cta-band h2 { color: #fff; }
+        .cta-band p { max-width: 560px; margin: 0 auto 2.4rem; opacity: 0.88; font-size: 1.08rem; }
+
+        /* ---------- Footer ---------- */
+        footer { background: var(--ink); color: #fff; padding: 3.5rem 0 2.5rem; text-align: center; }
+        .foot-links { display: flex; justify-content: center; gap: 1.8rem; flex-wrap: wrap; margin: 1.8rem 0; }
+        .foot-links a { color: rgba(255, 255, 255, 0.78); text-decoration: none; font-size: 0.95rem; }
+        .foot-links a:hover { color: #fff; }
+        .foot-fine { opacity: 0.55; font-size: 0.88rem; margin-top: 1.8rem; }
+
+        /* ---------- Reveal on scroll ----------
+           Pure CSS scroll-driven animation. No JavaScript involved, so there is
+           no failure path that leaves content invisible: browsers without
+           animation-timeline support simply skip the @supports block and render
+           everything normally. */
+        @keyframes rise {
+            from { opacity: 0; transform: translateY(26px); }
+            to   { opacity: 1; transform: none; }
         }
 
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary);
-        }
-
-        .footer-bottom {
-            opacity: 0.7;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-        }
-
-        /* Animations */
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-30px);
+        @supports (animation-timeline: view()) {
+            @media (prefers-reduced-motion: no-preference) {
+                .reveal {
+                    animation: rise linear both;
+                    animation-timeline: view();
+                    animation-range: entry 0% cover 20%;
+                }
             }
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            header {
-                padding: 1rem;
-            }
+        /* ---------- Responsive ---------- */
+        @media (max-width: 900px) {
+            .bento { grid-template-columns: repeat(2, 1fr); }
+            .tile--tall { grid-column: span 2; grid-row: span 1; }
+        }
 
-            nav ul {
-                gap: 1rem;
-                font-size: 0.9rem;
-            }
+        @media (max-width: 620px) {
+            .wrap { width: calc(100% - 2rem); }
+            section { padding: 4rem 0; }
+            .hero { padding: 4.5rem 0 5rem; }
+            nav ul { gap: 1rem; font-size: 0.9rem; }
+            .bento { grid-template-columns: 1fr; }
+            .tile--wide, .tile--tall { grid-column: span 1; }
+            .cta-row { flex-direction: column; }
+            .btn { width: 100%; }
+            .cta-band { padding: 3.5rem 1.5rem; border-radius: 26px; }
+        }
 
-            .logo {
-                font-size: 1.2rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .hero {
-                padding: 3rem 1rem;
-                min-height: auto;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .projects {
-                grid-template-columns: 1fr;
-            }
-
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-            }
-
-            .cta-section {
-                margin: 3rem 1rem;
-                padding: 3rem 1.5rem;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .faq-section {
-                padding: 1.5rem;
-            }
+        /* ---------- Motion safety ---------- */
+        @media (prefers-reduced-motion: reduce) {
+            .hero::before, .cta-band::before, .eyebrow .dot { animation: none; }
+            html { scroll-behavior: auto; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+
     <header>
-        <nav>
-            <div class="logo">MegaWeb Creations</div>
+        <nav class="wrap">
+            <a href="index.html" class="logo">MegaWeb Creations</a>
             <ul>
                 <li><a href="web-design.html">Web Design</a></li>
                 <li><a href="ai-automation.html">AI Automation</a></li>
                 <li><a href="seo-services.html">SEO</a></li>
-                <li><a href="#portfolio">Work</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#work">Work</a></li>
                 <li><a href="#contact" class="nav-cta">Book Free Call</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero: animated gradient -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>AI Automation + Web Design That <span class="gradient-text">Generates Customers</span></h1>
-            <p>Custom websites powered by AI that attract leads, qualify them automatically, and close deals 24/7. No templates. No guesswork. Results guaranteed.</p>
+        <div class="wrap hero-inner">
+            <span class="eyebrow"><span class="dot"></span> Booking new projects for this month</span>
+            <h1>Websites that sell,<br>wired with <span class="shine">AI that never sleeps</span></h1>
+            <p>Custom sites built to convert — paired with automation that answers, qualifies, and books your leads around the clock.</p>
+            <div class="cta-row">
+                <a href="#contact" class="btn btn-primary">Book a free strategy call</a>
+                <a href="#work" class="btn btn-glass">See our work</a>
+            </div>
+        </div>
+    </section>
 
-            <div class="hero-cta">
-                <button class="btn btn-primary">Start Your Free Strategy Call</button>
-                <button class="btn btn-secondary">See Our Portfolio</button>
+    <!-- Bento: services + stats -->
+    <section id="services">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <h2>Everything you need to win online</h2>
+                <p class="section-sub">Design, automation, and search — built as one system instead of three disconnected projects.</p>
             </div>
 
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">High-Converting Sites Built</div>
+            <div class="bento">
+                <a href="ai-automation.html" class="tile tile--tall tile--dark reveal">
+                    <div class="tile-ico">🤖</div>
+                    <h3>AI Automation</h3>
+                    <p class="tile-desc">Chatbots that answer in seconds, qualify the lead, book the call, and push everything into your CRM — running every hour you're not. This is the piece most agencies don't build, and the piece that turns a website into a salesperson.</p>
+                    <span class="tile-link">Explore automation →</span>
+                </a>
+
+                <a href="web-design.html" class="tile tile--wide reveal">
+                    <div class="tile-ico">🎨</div>
+                    <h3>Custom Web Design</h3>
+                    <p class="tile-desc">Fast, mobile-first, and built around your brand — never a template.</p>
+                    <span class="tile-link" style="color: var(--indigo);">See the process →</span>
+                </a>
+
+                <div class="tile tile--stat reveal">
+                    <div class="stat-num">2–3 wks</div>
+                    <div class="stat-lbl">Typical launch</div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">+325%</div>
-                    <div class="stat-label">Average Lead Growth</div>
+
+                <div class="tile tile--stat reveal">
+                    <div class="stat-num">24/7</div>
+                    <div class="stat-lbl">AI lead follow-up</div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">2-3 Weeks</div>
-                    <div class="stat-label">Launch Timeline</div>
+
+                <a href="seo-services.html" class="tile tile--wide reveal">
+                    <div class="tile-ico">📈</div>
+                    <h3>SEO &amp; Lead Generation</h3>
+                    <p class="tile-desc">Get found on Google for the searches your customers are already making.</p>
+                    <span class="tile-link" style="color: var(--indigo);">See what's included →</span>
+                </a>
+
+                <div class="tile tile--stat tile--dark reveal">
+                    <div class="stat-num">100%</div>
+                    <div class="stat-lbl">You own the site, domain &amp; code</div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">AI Lead Follow-Up</div>
+
+                <div class="tile tile--stat reveal">
+                    <div class="stat-num">$0</div>
+                    <div class="stat-lbl">Cost of the first call</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="section" id="services">
-        <h2 class="section-title">What We Build for Your Business</h2>
-        <p class="section-subtitle">Complete AI automation + custom web design solutions</p>
+    <!-- Portfolio: live previews -->
+    <section id="work">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <h2>Recent work</h2>
+                <p class="section-sub">Live sites — click any one to explore the real thing.</p>
+            </div>
 
-        <div class="services">
-            <a href="web-design.html" class="service-card" style="text-decoration: none; color: inherit;">
-                <div class="service-icon">🎨</div>
-                <h3>Custom Web Design</h3>
-                <p class="service-desc">Beautiful, fast, mobile-optimized websites that convert visitors into customers. Built for your unique brand — never a template. Each site is optimized for Google rankings and user conversion.</p>
-                <p style="margin-top: 1.5rem; color: #667eea; font-weight: 600;">Learn more →</p>
-            </a>
-            <a href="ai-automation.html" class="service-card" style="text-decoration: none; color: inherit;">
-                <div class="service-icon">🤖</div>
-                <h3>AI Automation</h3>
-                <p class="service-desc">Smart chatbots, instant lead qualification, automated follow-up, and booking systems that work 24/7. Your business never misses a lead while you sleep.</p>
-                <p style="margin-top: 1.5rem; color: #667eea; font-weight: 600;">Learn more →</p>
-            </a>
-            <a href="seo-services.html" class="service-card" style="text-decoration: none; color: inherit;">
-                <div class="service-icon">📈</div>
-                <h3>SEO &amp; Lead Generation</h3>
-                <p class="service-desc">Get found on Google for the keywords your customers search for. Organic traffic, local SEO, and conversion-focused optimization that brings paying customers.</p>
-                <p style="margin-top: 1.5rem; color: #667eea; font-weight: 600;">Learn more →</p>
-            </a>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="section" id="portfolio">
-        <h2 class="section-title">Client Success Stories</h2>
-        <p class="section-subtitle">Real results from real businesses using AI automation</p>
-
-        <div class="projects">
-            <a href="https://libecore.com" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
-                <div class="preview-window">
-                    <div class="preview-bar"><span></span><span></span><span></span><div class="preview-url">libecore.com</div></div>
-                    <div class="preview-frame">
+            <div class="work-grid">
+                <a href="https://libecore.com" target="_blank" rel="noopener" class="work reveal">
+                    <div class="chrome"><i></i><i></i><i></i><span>libecore.com</span></div>
+                    <div class="frame">
                         <iframe src="https://libecore.com" loading="lazy" title="LibeCore website preview" tabindex="-1" aria-hidden="true"></iframe>
                     </div>
-                </div>
-                <div class="project-content">
-                    <span class="project-tag">Healthcare</span>
-                    <h3 class="project-title">LibeCore</h3>
-                    <p class="project-desc">Professional B2B healthcare billing platform. Custom web design with clear navigation, professional branding, and demo booking system.</p>
-                    <div class="project-stats">
-                        <div class="stat-item">
-                            <div class="stat-value">✓</div>
-                            <div class="stat-title">View Live Site</div>
-                        </div>
+                    <div class="work-body">
+                        <span class="tag">Healthcare</span>
+                        <h3>LibeCore</h3>
+                        <p>B2B healthcare dispute-resolution platform. Clean, credible design with a clear demo-booking path.</p>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="https://choshenmishpatmiami.com" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
-                <div class="preview-window">
-                    <div class="preview-bar"><span></span><span></span><span></span><div class="preview-url">choshenmishpatmiami.com</div></div>
-                    <div class="preview-frame">
+                <a href="https://choshenmishpatmiami.com" target="_blank" rel="noopener" class="work reveal">
+                    <div class="chrome"><i></i><i></i><i></i><span>choshenmishpatmiami.com</span></div>
+                    <div class="frame">
                         <iframe src="https://choshenmishpatmiami.com" loading="lazy" title="Chosen Mishpat Miami website preview" tabindex="-1" aria-hidden="true"></iframe>
                     </div>
-                </div>
-                <div class="project-content">
-                    <span class="project-tag">Legal / Religious</span>
-                    <h3 class="project-title">Chosen Mishpat Miami</h3>
-                    <p class="project-desc">Jewish court (Beis Din) website with elegant, professional design. Features consultation booking, services overview, and contact system.</p>
-                    <div class="project-stats">
-                        <div class="stat-item">
-                            <div class="stat-value">✓</div>
-                            <div class="stat-title">View Live Site</div>
-                        </div>
+                    <div class="work-body">
+                        <span class="tag">Legal</span>
+                        <h3>Chosen Mishpat Miami</h3>
+                        <p>Beis Din (Jewish court) site with an elegant, trust-first design, consultation booking, and payments.</p>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="https://tomchei-shabbos-gilt.vercel.app" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
-                <div class="preview-window">
-                    <div class="preview-bar"><span></span><span></span><span></span><div class="preview-url">tomchei-shabbos-gilt.vercel.app</div></div>
-                    <div class="preview-frame">
+                <a href="https://tomchei-shabbos-gilt.vercel.app" target="_blank" rel="noopener" class="work reveal">
+                    <div class="chrome"><i></i><i></i><i></i><span>tomchei-shabbos-gilt.vercel.app</span></div>
+                    <div class="frame">
                         <iframe src="https://tomchei-shabbos-gilt.vercel.app" loading="lazy" title="Tomchei Shabbos website preview" tabindex="-1" aria-hidden="true"></iframe>
                     </div>
-                </div>
-                <div class="project-content">
-                    <span class="project-tag">Nonprofit</span>
-                    <h3 class="project-title">Tomchei Shabbos</h3>
-                    <p class="project-desc">Nonprofit donation platform with warm, community-focused design. Features donation system, volunteer signup, and mission-driven messaging.</p>
-                    <div class="project-stats">
-                        <div class="stat-item">
-                            <div class="stat-value">✓</div>
-                            <div class="stat-title">View Live Site</div>
-                        </div>
+                    <div class="work-body">
+                        <span class="tag">Nonprofit</span>
+                        <h3>Tomchei Shabbos of Florida</h3>
+                        <p>Donation platform with recurring giving, volunteer signup, and warm community-first design.</p>
                     </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="reviews">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <h2>What clients say</h2>
+            </div>
+
+            <div class="quotes">
+                <div class="quote reveal">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>"They didn't just build a website — they built a lead generation machine. We're getting 5–10 qualified leads a day now."</blockquote>
+                    <div class="who">Sarah Chen</div>
+                    <div class="where">Founder, Growth Consulting</div>
                 </div>
-            </a>
-        </div>
-    </section>
 
-    <!-- Testimonials Section -->
-    <section class="section" id="testimonials">
-        <h2 class="section-title">What Our Clients Say</h2>
-        <p class="section-subtitle">Real feedback from small business owners</p>
+                <div class="quote reveal">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>"The AI chatbot alone pays for itself. It's like having a sales rep answering questions 24/7."</blockquote>
+                    <div class="who">Marcus Rodriguez</div>
+                    <div class="where">CEO, Tech Solutions Inc</div>
+                </div>
 
-        <div class="testimonials">
-            <div class="testimonial">
-                <div class="stars">★★★★★</div>
-                <p class="quote">"They didn't just build a website — they built a lead generation machine. We're getting 5-10 qualified leads every single day now. Worth every penny."</p>
-                <p class="author">Sarah Chen</p>
-                <p class="company">Founder, Growth Consulting</p>
-            </div>
-
-            <div class="testimonial">
-                <div class="stars">★★★★★</div>
-                <p class="quote">"The AI chatbot alone pays for itself. It's like having a sales rep answering questions 24/7. This is a game changer for us."</p>
-                <p class="author">Marcus Rodriguez</p>
-                <p class="company">CEO, Tech Solutions Inc</p>
-            </div>
-
-            <div class="testimonial">
-                <div class="stars">★★★★★</div>
-                <p class="quote">"Fast turnaround, direct access to the builder, transparent pricing. No surprises. This is how you should work with agencies."</p>
-                <p class="author">Jessica Lee</p>
-                <p class="company">Owner, Legal Practice Group</p>
+                <div class="quote reveal">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>"Fast turnaround, direct access to the builder, transparent pricing. No surprises. This is how agencies should work."</blockquote>
+                    <div class="who">Jessica Lee</div>
+                    <div class="where">Owner, Legal Practice Group</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="section">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Everything you need to know about AI automation and web design</p>
-
-        <div class="faq-section">
-            <div class="faq-item">
-                <div class="faq-question">How long does it take to build my website? <span>▼</span></div>
-                <div class="faq-answer">Most sites launch in 2-3 weeks. We use a proven process for rapid deployment without sacrificing quality. Custom sites with AI automation may take 3-4 weeks.</div>
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <h2>Questions, answered</h2>
             </div>
 
-            <div class="faq-item">
-                <div class="faq-question">What's the cost of building a website with AI automation? <span>▼</span></div>
-                <div class="faq-answer">Pricing depends on complexity. Basic custom sites start at $3,500. Add AI automation (chatbots, lead qualification) for an additional $2,000-$5,000. We provide upfront pricing before you commit.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Do I own my website and domain? <span>▼</span></div>
-                <div class="faq-answer">100% yes. You own your domain, hosting, and all website code. We don't lock you in. You can leave anytime, though you won't want to after seeing your results!</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">How does the AI chatbot work? <span>▼</span></div>
-                <div class="faq-answer">Our AI chatbots answer customer questions 24/7, qualify leads, book appointments, and send data to your CRM. They're trained on your business info and improve over time.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Will my site rank on Google? <span>▼</span></div>
-                <div class="faq-answer">Yes. We optimize every site for SEO from day one — proper tags, schema markup, mobile optimization, fast loading, and keyword targeting. You'll see organic traffic within 3-6 months.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What if I need changes after launch? <span>▼</span></div>
-                <div class="faq-answer">We offer ongoing support and maintenance packages. Most changes are quick and affordable. We're here to help your site grow.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Do you offer SEO services separately? <span>▼</span></div>
-                <div class="faq-answer">Yes. SEO, content marketing, and ongoing optimization are available as standalone services for existing websites.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What industries do you work with? <span>▼</span></div>
-                <div class="faq-answer">We work with most industries — law, consulting, e-commerce, healthcare, real estate, coaching, and more. If you sell to customers, we can build you a system that generates leads.</div>
+            <div class="faq">
+                <div class="qa">
+                    <button class="q" aria-expanded="false">How long does it take to build my website?</button>
+                    <div class="a">Most sites launch in 2–3 weeks. Sites with AI automation layered in usually take 3–4.</div>
+                </div>
+                <div class="qa">
+                    <button class="q" aria-expanded="false">What does it cost?</button>
+                    <div class="a">Custom sites start around $3,500. AI automation — chatbots, lead qualification, booking — adds roughly $2,000–$5,000 depending on scope. You approve a fixed price before any work starts.</div>
+                </div>
+                <div class="qa">
+                    <button class="q" aria-expanded="false">Do I own my website and domain?</button>
+                    <div class="a">Completely. Your domain, your hosting, your code. No lock-in, no hostage situations — if you ever leave, the whole thing goes with you.</div>
+                </div>
+                <div class="qa">
+                    <button class="q" aria-expanded="false">How does the AI chatbot actually work?</button>
+                    <div class="a">It's trained on your services, pricing, and FAQs, so it answers like someone who works there. It qualifies leads, books appointments straight into your calendar, and hands the details to your CRM.</div>
+                </div>
+                <div class="qa">
+                    <button class="q" aria-expanded="false">Will my site rank on Google?</button>
+                    <div class="a">Every site ships SEO-ready — proper tags, schema markup, fast load times, mobile optimization, keyword targeting. Rankings build over months, not days; expect meaningful organic traffic in the 3–6 month range.</div>
+                </div>
+                <div class="qa">
+                    <button class="q" aria-expanded="false">What if I need changes after launch?</button>
+                    <div class="a">We offer ongoing support and maintenance. Most changes are quick and inexpensive.</div>
+                </div>
+                <div class="qa">
+                    <button class="q" aria-expanded="false">Can I get SEO without a new site?</button>
+                    <div class="a">Yes. SEO, content strategy, and ongoing optimization are available as standalone services for sites you already have.</div>
+                </div>
+                <div class="qa">
+                    <button class="q" aria-expanded="false">What industries do you work with?</button>
+                    <div class="a">Law, healthcare, nonprofits, consulting, e-commerce, real estate, coaching, and more. If you sell to customers, the system works.</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" id="contact">
-        <div class="cta-content">
-            <h2>Ready to Build Your AI-Powered Sales Machine?</h2>
-            <p>Book a free, no-pressure 30-minute strategy call. We'll show you exactly how to turn your website into your hardest-working salesperson — and give you a roadmap whether you hire us or not.</p>
-            <button class="btn btn-primary">Schedule Your Free Call Now →</button>
+    <!-- CTA -->
+    <section id="contact">
+        <div class="wrap">
+            <div class="cta-band reveal">
+                <h2>Ready to become the obvious choice?</h2>
+                <p>Book a free 30-minute strategy call. You'll leave with a concrete plan for turning your site into your hardest-working salesperson — whether you hire us or not.</p>
+                <div class="cta-row">
+                    <a href="tel:+13477828453" class="btn btn-primary">Call 347-782-8453</a>
+                    <a href="mailto:megawebcreations613@gmail.com" class="btn btn-glass">Email us</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="logo" style="text-align: center; margin-bottom: 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">MegaWeb Creations</div>
-            <p style="margin-bottom: 1.5rem; opacity: 0.8;">AI automation + custom web design that generates customers 24/7.</p>
-
-            <div class="footer-links">
+        <div class="wrap">
+            <div class="logo" style="display:inline-block;">MegaWeb Creations</div>
+            <p style="opacity:0.72; margin-top:0.6rem;">Websites that work. Automation that delivers.</p>
+            <div class="foot-links">
                 <a href="web-design.html">Web Design</a>
                 <a href="ai-automation.html">AI Automation</a>
                 <a href="seo-services.html">SEO Services</a>
-                <a href="#portfolio">Portfolio</a>
+                <a href="#work">Work</a>
                 <a href="#faq">FAQ</a>
-                <a href="tel:+1-347-782-8453">347-782-8453</a>
-                <a href="mailto:megawebcreations613@gmail.com">Contact</a>
+                <a href="tel:+13477828453">347-782-8453</a>
+                <a href="mailto:megawebcreations613@gmail.com">Email</a>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 MegaWeb Creations. All rights reserved.</p>
-                <p style="margin-top: 0.5rem;">🔧 Custom Web Design • 🤖 AI Automation • 📈 Lead Generation • 🚀 SEO Services</p>
-            </div>
+            <div class="foot-fine">&copy; 2026 MegaWeb Creations. All rights reserved.</div>
         </div>
     </footer>
 
     <script>
-        // FAQ Toggle
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                answer.classList.toggle('active');
+        // FAQ accordion
+        document.querySelectorAll('.q').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var panel = btn.nextElementSibling;
+                var open = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', String(!open));
+                panel.classList.toggle('open', !open);
             });
         });
+
+        // Scroll reveals are handled entirely in CSS (animation-timeline: view()),
+        // so there is no JS here that could leave the page blank.
     </script>
 </body>
 </html>
