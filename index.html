@@ -44,9 +44,32 @@
             "@type": "PostalAddress",
             "addressCountry": "US"
         },
-        "priceRange": "$$",
+        "priceRange": "$1500-$5000",
         "areaServed": "US",
-        "serviceType": ["Web Design", "AI Automation", "Lead Generation", "SEO Services"]
+        "serviceType": ["Web Design", "AI Automation", "Lead Generation", "SEO Services"],
+        "makesOffer": [
+            {
+                "@type": "Offer",
+                "name": "Starter — Custom Website",
+                "description": "Custom-designed, mobile-optimized website with contact forms and SEO foundations.",
+                "price": "1500",
+                "priceCurrency": "USD"
+            },
+            {
+                "@type": "Offer",
+                "name": "Business — Website with Payments & Booking",
+                "description": "Everything in Starter plus payment processing, online booking, and expanded SEO.",
+                "price": "3000",
+                "priceCurrency": "USD"
+            },
+            {
+                "@type": "Offer",
+                "name": "Automation — Website with AI Chatbot",
+                "description": "Everything in Business plus an AI chatbot, lead qualification, automated follow-up, and CRM setup.",
+                "price": "5000",
+                "priceCurrency": "USD"
+            }
+        ]
     }
     </script>
 
@@ -451,6 +474,100 @@
         .who { font-weight: 650; }
         .where { font-size: 0.9rem; color: var(--muted); }
 
+        /* ---------- Pricing ---------- */
+        .plans {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.4rem;
+            align-items: start;
+        }
+
+        .plan {
+            position: relative;
+            border-radius: var(--radius);
+            padding: 2.4rem 2.1rem;
+            background: #fff;
+            border: 1px solid rgba(22, 22, 46, 0.09);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s;
+        }
+
+        .plan:hover { transform: translateY(-6px); box-shadow: 0 22px 50px rgba(22, 22, 46, 0.12); }
+
+        .plan--featured {
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.14);
+            background:
+                linear-gradient(150deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.02)),
+                linear-gradient(135deg, #191243 0%, #2f1f6e 55%, #4f2a8f 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 18px 50px rgba(47, 31, 110, 0.3);
+        }
+
+        .badge {
+            position: absolute;
+            top: -0.8rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(120deg, var(--indigo), var(--magenta));
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            padding: 0.42rem 1rem;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+        .plan-name { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.35rem; }
+        .plan-for { font-size: 0.92rem; color: var(--muted); margin-bottom: 1.6rem; }
+        .plan--featured .plan-for { color: rgba(255, 255, 255, 0.7); }
+
+        .plan-price { font-size: 2.6rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
+        .plan-price small { font-size: 0.95rem; font-weight: 500; letter-spacing: 0; color: var(--muted); }
+        .plan--featured .plan-price small { color: rgba(255, 255, 255, 0.7); }
+
+        .plan-mo {
+            margin-top: 0.7rem;
+            padding-top: 0.9rem;
+            border-top: 1px dashed rgba(22, 22, 46, 0.14);
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        .plan--featured .plan-mo { border-top-color: rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.82); }
+        .plan-mo b { color: var(--text); font-weight: 700; }
+        .plan--featured .plan-mo b { color: #fff; }
+
+        .plan ul { list-style: none; margin: 1.7rem 0 2rem; display: grid; gap: 0.75rem; flex: 1; }
+
+        .plan li { display: flex; gap: 0.7rem; font-size: 0.96rem; line-height: 1.5; }
+
+        .plan li::before {
+            content: '✓';
+            font-weight: 700;
+            color: var(--indigo);
+            flex-shrink: 0;
+        }
+
+        .plan--featured li::before { color: #a5b4fc; }
+        .plan li.off { color: var(--muted); opacity: 0.65; }
+        .plan li.off::before { content: '—'; color: var(--muted); }
+
+        .plan .btn { width: 100%; text-align: center; padding: 0.95rem 1.5rem; }
+
+        .plan-note {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-top: 2.4rem;
+            max-width: 640px;
+            margin-inline: auto;
+        }
+
         /* ---------- FAQ ---------- */
         .faq { max-width: 820px; margin-inline: auto; }
 
@@ -565,6 +682,7 @@
                 <li><a href="ai-automation.html">AI Automation</a></li>
                 <li><a href="seo-services.html">SEO</a></li>
                 <li><a href="#work">Work</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact" class="nav-cta">Book Free Call</a></li>
             </ul>
         </nav>
@@ -716,6 +834,70 @@
         </div>
     </section>
 
+    <!-- Pricing -->
+    <section id="pricing">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <h2>Simple, honest pricing</h2>
+                <p class="section-sub">One build fee, one monthly fee. You approve the price before anything starts — and you own everything, always.</p>
+            </div>
+
+            <div class="plans">
+                <div class="plan reveal">
+                    <div class="plan-name">Starter</div>
+                    <div class="plan-for">For getting online and looking credible.</div>
+                    <div class="plan-price">$1,500 <small>build</small></div>
+                    <div class="plan-mo"><b>$150</b>/month upkeep</div>
+                    <ul>
+                        <li>Custom design — no templates</li>
+                        <li>Mobile-optimized &amp; fast</li>
+                        <li>Contact &amp; inquiry forms</li>
+                        <li>SEO foundations + Google setup</li>
+                        <li>Launch in 2–3 weeks</li>
+                        <li class="off">Payments &amp; booking</li>
+                        <li class="off">AI chatbot</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="background: linear-gradient(120deg, var(--indigo), var(--magenta)); color:#fff;">Get started</a>
+                </div>
+
+                <div class="plan plan--featured reveal">
+                    <span class="badge">Most popular</span>
+                    <div class="plan-name">Business</div>
+                    <div class="plan-for">For taking payments and booking clients.</div>
+                    <div class="plan-price">$3,000 <small>build</small></div>
+                    <div class="plan-mo"><b>$150</b>/month upkeep</div>
+                    <ul>
+                        <li>Everything in Starter</li>
+                        <li>Payment processing built in</li>
+                        <li>Online booking &amp; scheduling</li>
+                        <li>Multi-page site with service pages</li>
+                        <li>Expanded SEO &amp; local search</li>
+                        <li class="off">AI chatbot</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get started</a>
+                </div>
+
+                <div class="plan reveal">
+                    <div class="plan-name">Automation</div>
+                    <div class="plan-for">For turning the site into a salesperson.</div>
+                    <div class="plan-price">$5,000 <small>build</small></div>
+                    <div class="plan-mo"><b>$350</b>/month upkeep &amp; AI</div>
+                    <ul>
+                        <li>Everything in Business</li>
+                        <li>AI chatbot trained on your business</li>
+                        <li>Automatic lead qualification</li>
+                        <li>Instant follow-up &amp; reminders</li>
+                        <li>CRM &amp; pipeline setup</li>
+                        <li>Books calls straight to your calendar</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="background: linear-gradient(120deg, var(--indigo), var(--magenta)); color:#fff;">Get started</a>
+                </div>
+            </div>
+
+            <p class="plan-note reveal">Monthly upkeep covers unlimited content edits — text, images, prices, hours, new photos. Brand-new pages or features are quoted separately so you're never surprised. Cancel anytime; the site stays yours.</p>
+        </div>
+    </section>
+
     <!-- FAQ -->
     <section id="faq">
         <div class="wrap">
@@ -730,7 +912,7 @@
                 </div>
                 <div class="qa">
                     <button class="q" aria-expanded="false">What does it cost?</button>
-                    <div class="a">Custom sites start around $3,500. AI automation — chatbots, lead qualification, booking — adds roughly $2,000–$5,000 depending on scope. You approve a fixed price before any work starts.</div>
+                    <div class="a">Three tiers: $1,500 for a custom site with forms, $3,000 to add payments and booking, $5,000 for the full AI automation build. Every tier includes monthly upkeep — $150, or $350 on the automation tier since it covers the AI running around the clock. Full breakdown in <a href="#pricing" style="color: var(--indigo);">pricing</a>.</div>
                 </div>
                 <div class="qa">
                     <button class="q" aria-expanded="false">Do I own my website and domain?</button>
@@ -746,7 +928,7 @@
                 </div>
                 <div class="qa">
                     <button class="q" aria-expanded="false">What if I need changes after launch?</button>
-                    <div class="a">We offer ongoing support and maintenance. Most changes are quick and inexpensive.</div>
+                    <div class="a">That's what the monthly covers. Text, images, prices, hours, new photos — send them over and they get done, no per-change invoices. Entirely new pages or features get quoted separately so there are no surprises on either side.</div>
                 </div>
                 <div class="qa">
                     <button class="q" aria-expanded="false">Can I get SEO without a new site?</button>
@@ -783,6 +965,7 @@
                 <a href="ai-automation.html">AI Automation</a>
                 <a href="seo-services.html">SEO Services</a>
                 <a href="#work">Work</a>
+                <a href="#pricing">Pricing</a>
                 <a href="#faq">FAQ</a>
                 <a href="tel:+13477828453">347-782-8453</a>
                 <a href="mailto:megawebcreations613@gmail.com">Email</a>
